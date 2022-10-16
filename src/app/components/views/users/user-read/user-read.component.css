@@ -1,0 +1,20 @@
+.user{
+    width: 95%;
+    height: 70%;
+    background-color: rgb(237, 139, 100);
+    margin: 1rem auto;
+}
+
+
+
+@media(max-width:450px){
+    .user{
+        width: 70%;
+    }
+}
+
+@media(max-width:770px){
+    .user{
+        width: 90%;
+    }
+}

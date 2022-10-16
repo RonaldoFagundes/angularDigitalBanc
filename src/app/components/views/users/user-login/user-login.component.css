@@ -1,0 +1,26 @@
+.user-login{
+    width: 95%;
+    height: 70%;
+    background-color: rgb(32, 24, 21);
+    margin: 1rem auto;
+}
+
+.title{
+    color: chartreuse;
+}
+
+.subtitle{
+    color: darkorange;
+}
+
+@media(max-width:450px){
+    .user-login{
+        width: 70%;
+    }
+}
+
+@media(max-width:770px){
+    .user-login{
+        width: 90%;
+    }
+}

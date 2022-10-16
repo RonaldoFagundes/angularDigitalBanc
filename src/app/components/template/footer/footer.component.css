@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.footer{
+    height: 18%;
+    padding: 2%;
+    background-color: rgba(0, 0, 0, 0.411);
+    color: aqua;
+    position: fixed;
+    bottom: 0;
+    justify-content: center;
+    font-size: 0.9rem;
+}
