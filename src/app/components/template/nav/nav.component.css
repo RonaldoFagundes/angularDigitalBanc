@@ -4,6 +4,19 @@
 }
 
 .container{
-    height: 64%;
+    height: 68%;
+    width: auto;
+    /*height: 85%;*/
     background-color:cadetblue;
-} 
+}
+
+
+
+
+.menu{
+    background-color: aquamarine;
+}
+
+i{
+    padding-right: .6rem;
+}

@@ -6,7 +6,7 @@
 .header{
 
     width: auto;
-    height: 18%;
+    height: 90px;
     background-color: rgba(33, 160, 160, 0.37);
     padding: 2%; 
     display: flex;      
@@ -29,25 +29,7 @@ img{
     background-color: rgba(0, 255, 234, 0.301);
 } 
 
-ul{
-    height: 70%;
-    background-color: rgb(26, 19, 19); 
-    list-style: none;
-}
-
-li{
-    height: 30%;
-}
-
-i{
-    font-size: 0.8rem;
-}
 
 
 
-.menu{
-    height: 100px;
-    width: 200px;
-    background-color: blueviolet;
-    display: block;
-}
+

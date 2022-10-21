@@ -1,15 +1,44 @@
 <mat-sidenav-container class="container">
 
 
-  <span>Containner</span>
+
+ <mat-sidenav  class="menu" mode="side" opened>
+
+    <mat-nav-list>
+       <a routerLink="" mat-list-item>
+          <i class="material-icons">home</i>               
+       </a>
+       
+       <a routerLink="/login" mat-list-item>
+           <i class="material-icons"></i> 
+           Logar         
+        </a>
+
+        <a routerLink="/users" mat-list-item>
+          <i class="material-icons"></i>    
+          ADM_USERS
+       </a>
+
+       <a routerLink="/investimentos" mat-list-item>
+         <i class="material-icons"></i>    
+          ADM_INVEST 
+      </a>
+
+      
+    </mat-nav-list>
+  </mat-sidenav>
 
 
-   
+  <mat-sidenav-content>
+        <router-outlet></router-outlet>
+  </mat-sidenav-content>
 
- 
-
- <router-outlet></router-outlet>
-
- 
-
+  
 </mat-sidenav-container> 
+
+
+
+
+
+
+

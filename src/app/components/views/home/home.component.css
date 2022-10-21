@@ -1,9 +1,28 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.container{
+    height: 64%;
+    height: 85%;
+    background-color:cadetblue;
+}
+
+
+
+
+
 .home{
     width: 95%;
-    height: 70%;
+    height: 95%;
     background-color: cornflowerblue;
     margin: 1rem auto;
 }
+
 
 
 

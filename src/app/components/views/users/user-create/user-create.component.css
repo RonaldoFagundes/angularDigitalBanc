@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
     padding: 0;
@@ -13,14 +14,12 @@
 
 
 
-.login{
+.create{
     width: 95%;
     height: 95%;
     background-color: cornflowerblue;
     margin: 1rem auto;
 }
-
-
 
 
 form{
@@ -57,4 +56,7 @@ button{
     padding-right: 2rem; 
     padding-left: 2rem; 
 }
+
+
+
 
