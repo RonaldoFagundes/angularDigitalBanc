@@ -5,8 +5,9 @@
     </div>
 
 
+
     <mat-form-field >        
-       <input   matInput [(ngModel)]="user.id"  disabled="true">
+       <input   matInput [(ngModel)]="id_user"  disabled="true">
      </mat-form-field>
 
 
@@ -99,19 +100,22 @@
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
       </table>
   
+
+       <div class="buttons">
+
+        <button  (click)="openCont()" [disabled]="new_conta"  mat-stroked-button  class="mat-elevation-z8">
+          1º CONTA</button>
+  
+         <button  (click)="openCont()" [disabled]="add_conta" mat-stroked-button  class="mat-elevation-z8">NOVA CONTA</button>  
+  
+       </div>
+
+
    </div>
   
 
    
-     <div class="buttons">
-
-      <button  (click)="openCont()" [disabled]="new_conta"  mat-stroked-button  class="mat-elevation-z8">
-        1º CONTA</button>
-
-       <button  (click)="openCont()" [disabled]="add_conta" mat-stroked-button  class="mat-elevation-z8">NOVA CONTA</button>
-
-
-     </div>
+   
   
 
 

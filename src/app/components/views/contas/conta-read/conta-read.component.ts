@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { User } from '../../users/user.model';
-//import { UserService } from '../../users/user.service';
+import { UserService } from '../../users/user.service';
 
 import { Contas } from '../contas.model';
 import { ContasService } from '../contas.service';
@@ -49,7 +49,7 @@ export class ContaReadComponent implements OnInit {
     private router: Router,
     private contaservice : ContasService,
 
-    //private userservice: UserService, 
+    private userservice: UserService, 
      ) { }
 
 
@@ -57,12 +57,13 @@ export class ContaReadComponent implements OnInit {
   ngOnInit(): void { 
   this.id_user = this.route.snapshot.paramMap.get('id_user')! 
   this.findAllContas();
+  this.findUserById();
   }
 
 
 
- /*  findUserById(): void {
-    this.userservice.findById(this.user.id!).subscribe((resposta) => {
+  findUserById(): void {
+    this.userservice.findById(this.id_user!).subscribe((resposta) => {
     this.user.name = resposta.name;   
   })
 }  
@@ -72,7 +73,7 @@ export class ContaReadComponent implements OnInit {
 
 
 
-
+/*
 findAllContas(){
   this.contaservice.findAll().subscribe(resposta=> {
     this.contas= resposta;

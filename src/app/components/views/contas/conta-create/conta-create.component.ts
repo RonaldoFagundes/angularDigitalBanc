@@ -14,6 +14,9 @@ import { Contas} from '../contas.model';
 export class ContaCreateComponent implements OnInit {
 
 
+
+   id_user:String=''
+
   new_conta:number=0
 
 
@@ -35,7 +38,23 @@ export class ContaCreateComponent implements OnInit {
 
 
   ngOnInit(): void {
+    this.id_user=this.route.snapshot.paramMap.get("id_user")!;
   }
+
+
+
+
+   createConta():void{
+      this.gerarConta();
+       this.contaservice.create(this.contas,this.id_user).subscribe(resposta=>{
+         this.router.navigate([`contas/${this.id_user}`])
+          this.contaservice.mensagem("Conta criada com sucesso")
+       },err=>{
+          this.router.navigate([`contas/${this.id_user}`])
+           this.contaservice.mensagem(" Erro ao Criar conta")
+       })
+   }
+
 
 
 
@@ -48,8 +67,12 @@ export class ContaCreateComponent implements OnInit {
     this.new_conta = Math.floor(Math.random()*(max - min))
       
 
+    this.contas.numero = this.new_conta.toString();
+
     //this.router.navigate([`contas/${this.user.id}`]);
    }
+
+
 
 
 

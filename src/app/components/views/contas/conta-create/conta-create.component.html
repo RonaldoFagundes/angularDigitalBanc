@@ -15,7 +15,7 @@
        <mat-form-field class="form">
   
           <mat-label>Nº</mat-label>
-          <input matInput   [(ngModel)]="new_conta"  type="text" name="numero"  disabled="true">
+          <input matInput   [(ngModel)]="contas.numero"  type="text" name="numero"  disabled="true">
   
        </mat-form-field>
   
@@ -24,7 +24,7 @@
        <mat-form-field class="form">
   
          <mat-label>SALDO</mat-label>
-         <input matInput  type="text"  name="saldo"   placeholder="EX. DEPOSITAR">
+         <input matInput  [(ngModel)]="contas.saldo" type="text"  name="saldo"   placeholder="EX. DEPOSITAR">
   
        </mat-form-field>
   
@@ -34,7 +34,7 @@
      <mat-form-field class="form">
   
         <mat-label>TIPO</mat-label>
-        <input matInput  type="text" name="tipo"  placeholder=" tipo de conta">
+        <input matInput [(ngModel)]="contas.tipo" type="text" name="tipo"  placeholder=" tipo de conta">
   
      </mat-form-field>
   
@@ -43,7 +43,7 @@
 
      <div class="buttons">
 
-       <button (click)="gerarConta()" mat-stroked-button  class="mat-elevation-z8">ABRIR</button>     
+       <button (click)="createConta()" mat-stroked-button  class="mat-elevation-z8">ABRIR</button>     
 
      </div>
 
