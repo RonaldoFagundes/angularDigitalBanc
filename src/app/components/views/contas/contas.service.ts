@@ -18,11 +18,21 @@ export class ContasService {
   constructor( private http: HttpClient  ) { }
 
   
-  findAll():Observable<Contas[]>{
+ /*  findAll():Observable<Contas[]>{
     const url = `${this.baseUrl}contas?users=1`  
     return this.http.get<Contas[]>(url);
-  }
+  } */
+
 
 
   
+  findAllByUser(id_user:String):Observable<Contas[]>{
+    const url = `${this.baseUrl}contas?users=${id_user}`
+    return this.http.get<Contas[]>(url);
+  }
+  
+
+
+
+
 }

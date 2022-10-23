@@ -18,10 +18,10 @@
 }
 
 
-button{
+/* button{
     margin-bottom: 1rem;
     color: azure;       
-}
+} */
 
 .table{
   width: 100%;
@@ -31,6 +31,17 @@ button{
     width: 5rem;
 }
 
+.buttons{
+    width: 100%;
+    margin: 2rem;
+    text-align: start;
+}
 
+
+button{
+    margin-right: .5rem;
+    padding-right: 2rem; 
+    padding-left: 2rem; 
+}
 
 

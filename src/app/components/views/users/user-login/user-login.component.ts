@@ -21,10 +21,8 @@ export class UserLoginComponent implements OnInit {
     password:''    
   }
 
-   userNumero:String ="";
-   userName:String ="";
-   userPassword:String ="";
-
+  
+   
 
   constructor( 
     private service: UserService, 
@@ -32,58 +30,31 @@ export class UserLoginComponent implements OnInit {
     private router: Router) { }
 
 
-  ngOnInit(): void {
-   // this.user.id = this.route.snapshot.paramMap.get('id')!
-    //this.findById();
+  ngOnInit(): void {  
   }
 
 
 
-   /*
-    findById(): void {
+   
+    logar(): void {
       this.service.findById(this.user.id!).subscribe((resposta) => {
-      this.user.name = resposta.name
-      this.user.login = resposta.login
+
+    if ( this.user.login === resposta.login && this.user.password === resposta.password){
+            this.router.navigate([`contas/${this.user.id}`]);
+              console.log("credenciais ok  ")
+           }else{
+            this.service.mensagem("Dados de Validação incorretos! ");
+            console.log(" error nas credenciais ")
+           }
+        
+      
     })
   } 
-  */
+ 
 
 
-
-
-
-
-  logar():void {
-         
-   this.service.findById(this.user.id!).subscribe((resposta) => {
-   this.user.login = resposta.login   
-   this.user.password = resposta.password  
-    
- if ( this.user.login === this.userName && this.user.password === this.userPassword ){
-    //this.router.navigate(["contas"]); 
-    this.router.navigate([`contas/${this.user.id}`]);
-  }else{
-    this.service.mensagem("login ou senha incorretos! ");    
-  }
+ 
   
-})
- 
-
-       
-   
-
-
-
-      
-
-
-    }
-
-
-
- 
-
-
 
 
 

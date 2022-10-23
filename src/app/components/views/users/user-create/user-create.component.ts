@@ -23,29 +23,29 @@ export class UserCreateComponent implements OnInit {
 
   constructor(
     private service: UserService, 
-    private route: ActivatedRoute, 
+   // private route: ActivatedRoute, 
     private router: Router
   ) { }
 
   
-
+ 
 
   ngOnInit(): void {
-    this.user.id = this.route.snapshot.paramMap.get('id')!
-    this.findById();
+    // this.user.id = this.route.snapshot.paramMap.get('id')!
+   // this.findById();
   }
 
 
 
 
-
+ /*
   findById(): void {
     this.service.findById(this.user.id!).subscribe((resposta) => {
     this.user.name = resposta.name
     this.user.login = resposta.login
   })
-}
-
+} 
+ */
 
 
 
@@ -54,18 +54,25 @@ export class UserCreateComponent implements OnInit {
 
 
  create():void{
+
   this.service.create(this.user).subscribe((resposta)=>{
-     this.router.navigate(["contaCreate"]);  
+
+    // this.router.navigate([`contas/${this.user.id}/create`]);  
+     this.router.navigate(['login']);  
      this.service.mensagem("Usuario criado com sucesso!");
+
   }, err =>{
      for(let i = 0 ; i < err.error.errors.length; i++  ) {
          this.service.mensagem(err.error.errors[i].message)
      }
   })  
+
+
+
 }
 
 
-
+  
 
 
 }

@@ -47,13 +47,13 @@ const routes: Routes = [
    
 
    {
-   path:'contaCreate',
+   path:'contas/:id_user/create',
    component:ContaCreateComponent
    },
 
 
    {
-    path:'contas/:id',
+    path:'contas/:id_user',
     component:ContaReadComponent
     },
  
@@ -68,7 +68,7 @@ const routes: Routes = [
    
 
    {
-    path:'contas/:id_conta/movimentacao',
+    path:'contas/:id_conta/movimentacao',    
     component:MovimentacaoReadComponent
    },
 

@@ -56,16 +56,26 @@
           <td mat-cell *matCellDef="let row">
            
           
-             <a  class="movimentacao" routerLink="movimentacao" >
+            <!--  <a  class="movimentacao" routerLink="movimentacao" >
                <i class="material-icons">book</i>
-             </a>
+             </a> -->
+          
+             <button (click)="readMovimentacao(row.id)"  mat-stroked-button        class="mat-elevation-z8">
+              EXTRATO
+             </button>
 
+             <button  mat-stroked-button        class="mat-elevation-z8">
+              LANCAR
+             </button>
 
           </td>
         </ng-container>
 
 
-        <ng-container matColumnDef="acoes">
+
+
+        <!-- <ng-container matColumnDef="acoes">
+
           <th class="mat-header" mat-header-cell *matHeaderCellDef> AÇOÊS </th>
           <td mat-cell *matCellDef="let row"> 
      
@@ -78,10 +88,9 @@
              </a>
 
           </td>
-        </ng-container>
+        </ng-container> -->
   
-        
-              
+                    
       
         
        
@@ -92,6 +101,19 @@
   
    </div>
   
+
+   
+     <div class="buttons">
+
+      <button  (click)="openCont()" [disabled]="new_conta"  mat-stroked-button  class="mat-elevation-z8">
+        1º CONTA</button>
+
+       <button  (click)="openCont()" [disabled]="add_conta" mat-stroked-button  class="mat-elevation-z8">NOVA CONTA</button>
+
+
+     </div>
+  
+
 
 
   </div>  
