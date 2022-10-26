@@ -15,7 +15,7 @@ export class ContaCreateComponent implements OnInit {
 
 
 
-   id_user:String=''
+  id_user:String=''
 
   new_conta:number=0
 
@@ -65,11 +65,8 @@ export class ContaCreateComponent implements OnInit {
     const max = 999;
                   
     this.new_conta = Math.floor(Math.random()*(max - min))
-      
-
     this.contas.numero = this.new_conta.toString();
-
-    //this.router.navigate([`contas/${this.user.id}`]);
+    
    }
 
 

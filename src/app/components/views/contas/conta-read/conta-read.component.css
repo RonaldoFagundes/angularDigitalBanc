@@ -1,10 +1,34 @@
-.content{
-    width: 90%;
-
-    height: 90%;
-    background-color: darkcyan;
-    margin: 1.4rem auto auto auto;
+*{
+    margin: 0;
+    padding: 0;
 }
+
+
+
+
+
+.container{
+    height: auto;    
+    background-color: rgba(22, 21, 22, 0.2);
+    background-image: linear-gradient(to button, transparent, rgba(10, 4, 44, 0.151));
+    box-shadow: 5px 5px 8px 5px rgba(0, 0, 0, 0.7);
+}
+
+
+
+
+
+.content{
+    width: 94%;    
+    padding: 2rem;
+    background-color: rgba(30, 8, 55, 0.4);
+    background-image: linear-gradient(to button, transparent, rgba(30, 10, 30, 0.4));
+    box-shadow: 5px 5px 8px 5px rgba(0, 0, 0, 0.7);
+    margin: 1.2rem auto auto auto;
+}
+
+
+
 
 .title{
     text-align: center;
@@ -17,7 +41,9 @@
     font-weight: 500;
 }
 
-
+.form-text{
+    color:#3385ff;
+}
 /* button{
     margin-bottom: 1rem;
     color: azure;       
@@ -25,23 +51,32 @@
 
 .table{
   width: 100%;
+  padding: 20px;
 }
 
 .mat-header{
-    width: 5rem;
+    width: 5rem;    
 }
+
+
 
 .buttons{
     width: 100%;
-    margin: auto 2rem;
+    margin: 2rem;
     text-align: start;
+    
+    
 }
+
+
 
 
 button{
     margin-right: .5rem;
     padding-right: 2rem; 
     padding-left: 2rem; 
+    background-color: rgb(80, 234, 245);
+    color: blue;
 }
 
 

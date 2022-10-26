@@ -3,6 +3,8 @@ import { User } from '../user.model';
 import { UserService } from '../user.service';
 import { ActivatedRoute , Router} from '@angular/router';
 
+
+
 @Component({
   selector: 'app-user-login',
   templateUrl: './user-login.component.html',
@@ -13,7 +15,7 @@ import { ActivatedRoute , Router} from '@angular/router';
 export class UserLoginComponent implements OnInit {
 
 
-
+ 
   user: User = {
     id: '',
     name: '',
@@ -31,6 +33,7 @@ export class UserLoginComponent implements OnInit {
 
 
   ngOnInit(): void {  
+   // this.user.id = this.route.snapshot.paramMap.get('id_user')!;
   }
 
 

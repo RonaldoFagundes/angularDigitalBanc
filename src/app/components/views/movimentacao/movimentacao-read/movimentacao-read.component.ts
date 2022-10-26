@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Movimentacao } from '../movimentacao.model';
 import { MovimentacaoService } from '../movimentacao.service';
 import { ActivatedRoute, Router } from '@angular/router';
-
+import { UserService } from '../../users/user.service';
 
 @Component({
   selector: 'app-movimentacao-read',
@@ -20,7 +20,11 @@ export class MovimentacaoReadComponent implements OnInit {
  // displayedColumns: string[] = ['id', 'tipo', 'descricao','valor', 'acoes']; 
   displayedColumns: string[] = ['id', 'tipo', 'descricao','valor'];
 
+
+
  id_conta:String =""
+
+ id_user:String =""
 
 
 
@@ -28,14 +32,22 @@ export class MovimentacaoReadComponent implements OnInit {
     private service:MovimentacaoService, 
     private route:ActivatedRoute,
     private router: Router,
+    private userService:UserService
     ) { }
 
 
+    
 
   ngOnInit(): void {
+    this.id_user = this.route.snapshot.paramMap.get('id_user')!;
     this.id_conta = this.route.snapshot.paramMap.get('id_conta')!;
     this.findAllMovimentacaoByConta();
   }
+
+
+
+
+   
 
 
 
@@ -50,6 +62,9 @@ export class MovimentacaoReadComponent implements OnInit {
 
 
 
+  telaConta():void{
+    this.router.navigate([`contas/${this.id_user}/${this.id_conta}/selected`]);
+  }
 
 
 }

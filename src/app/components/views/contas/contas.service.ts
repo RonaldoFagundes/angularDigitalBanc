@@ -24,11 +24,19 @@ export class ContasService {
   } */
 
 
-
+ // testidconta:String="1"
   
   findAllByUser(id_user:String):Observable<Contas[]>{
     const url = `${this.baseUrl}contas?users=${id_user}`
     return this.http.get<Contas[]>(url);
+  }
+
+
+
+
+  findById(id_conta:String):Observable<Contas>{
+    const url = `${this.baseUrl}contas/${id_conta}`
+    return this.http.get<Contas>(url);
   }
   
 
@@ -38,6 +46,17 @@ export class ContasService {
     const url = `${this.baseUrl}contas?users=${id_user}`
      return this.http.post<Contas>(url,contas);
   }
+
+
+
+
+  
+
+  update(contas:Contas):Observable<void>{
+    const url = `${this.baseUrl}contas/${contas.id}`
+     return this.http.put<void>(url,contas);
+  }
+
 
 
 

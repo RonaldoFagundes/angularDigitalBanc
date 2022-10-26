@@ -1,3 +1,9 @@
+
+<mat-sidenav-container class="container">
+
+
+
+
 <div class="content">
 
 
@@ -6,9 +12,30 @@
     </div>
  
  
+    <mat-label>id user :</mat-label>
+     <mat-form-field >        
+       <input   matInput [(ngModel)]="id_user"  disabled="true">
+     </mat-form-field>
  
-  
-  <div class="mat-elevation-z8 content-table">
+    
+
+
+    <mat-label>id conta :</mat-label>
+     <mat-form-field >        
+      <input   matInput [(ngModel)]="id_conta"  disabled="true">
+    </mat-form-field>
+
+
+
+
+
+
+
+
+
+
+  <div class="mat-elevation-z8 content-table">      
+
  
      <table class="table"  mat-table [dataSource]="movimentacao" >      
  
@@ -17,7 +44,6 @@
          <th mat-header-cell *matHeaderCellDef> ID </th>
          <td mat-cell *matCellDef="let row"> {{row.id}} </td>
        </ng-container>
-     
  
       
        <ng-container matColumnDef="tipo">
@@ -78,5 +104,18 @@
  
   </div>
  
+
+
+  <div class="buttons">      
+
+    <button (click)=" telaConta()" mat-stroked-button   class="mat-elevation-z8">
+      Voltar
+    </button>  
+
+  </div>
+
+  
  </div>
  
+
+ </mat-sidenav-container>

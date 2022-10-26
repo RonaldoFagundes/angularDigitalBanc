@@ -64,7 +64,7 @@ export class ContaReadComponent implements OnInit {
 
   findUserById(): void {
     this.userservice.findById(this.id_user!).subscribe((resposta) => {
-    this.user.name = resposta.name;   
+    this.user.name = `User : ${resposta.name}`;   
   })
 }  
 
@@ -109,11 +109,26 @@ findAllContas(){
  }
 
 
-
- readMovimentacao(id:String):void{
- this.router.navigate([`contas/${id}/movimentacao`]);
- 
+ selectConta(id:String):void{
+ // this.router.navigate([`contas/${id}/selected`]); 
+  this.router.navigate([`contas/${this.id_user}/${id}/selected`]); 
  }
+
+
+ 
+
+ /*
+ readMovimentacao(id:String):void{
+ this.router.navigate([`contas/${id}/movimentacao`]); 
+ }
+
+ lancarMovimentacao(id:String):void{
+  this.router.navigate([`contas/${id}/movimentacao/create`]);
+ } 
+ */
+
+
+
 
 
 

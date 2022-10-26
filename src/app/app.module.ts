@@ -26,12 +26,16 @@ import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 import { FormsModule ,  ReactiveFormsModule} from '@angular/forms';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MovimentacaoReadComponent } from './components/views/movimentacao/movimentacao-read/movimentacao-read.component';
 import { InvestimentosReadComponent } from './components/views/investimentos/investimentos-read/investimentos-read.component';
 import { ContaCreateComponent } from './components/views/contas/conta-create/conta-create.component';
+import { MovimentacaoCreateComponent } from './components/views/movimentacao/movimentacao-create/movimentacao-create.component';
+import { ContaUpdateComponent } from './components/views/contas/conta-update/conta-update.component';
+import { ContaSelectedComponent } from './components/views/contas/conta-selected/conta-selected.component';
 
 
 
@@ -42,7 +46,7 @@ import { ContaCreateComponent } from './components/views/contas/conta-create/con
     HeaderComponent,
     NavComponent,    
     FooterComponent, 
-    HomeComponent, UserReadComponent, UserLoginComponent, UserCreateComponent, ContaReadComponent, MovimentacaoReadComponent, InvestimentosReadComponent, ContaCreateComponent   
+    HomeComponent, UserReadComponent, UserLoginComponent, UserCreateComponent, ContaReadComponent, MovimentacaoReadComponent, InvestimentosReadComponent, ContaCreateComponent, MovimentacaoCreateComponent, ContaUpdateComponent, ContaSelectedComponent   
   ],
   imports: [
     BrowserModule,
@@ -61,7 +65,8 @@ import { ContaCreateComponent } from './components/views/contas/conta-create/con
     MatInputModule,
     FormsModule,
     ReactiveFormsModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]

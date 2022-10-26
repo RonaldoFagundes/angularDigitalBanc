@@ -1,8 +1,38 @@
-.content{
-    width: 90%;
-    background-color: darkcyan;
-    margin: 1.4rem auto auto auto;
+
+*{
+    margin: 0;
+    padding: 0;
 }
+
+
+.container{
+    height: 64%;
+    height: 100%;
+    
+    background-color: rgba(23, 21, 22, 0.3);
+    background-image: linear-gradient(to top, transparent, rgba(23, 21, 22, 0.3));
+    box-shadow: 5px 5px 8px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+.content{
+   /*  width: 90%;
+    background-color: darkcyan;
+    margin: 1.4rem auto auto auto; */
+
+    width: 98%;  
+    
+    background-color: rgba(58, 15, 22, 0.3);
+    background-image: linear-gradient(to top, transparent, rgba(58, 110, 153, 0.384));
+    box-shadow: 5px 5px 8px 5px rgba(0, 0, 0, 0.7);
+
+    margin: 1rem auto;
+
+}
+
+
 
 
 .title{

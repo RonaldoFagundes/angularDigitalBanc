@@ -5,7 +5,6 @@
 }
 
 
-
 .container{
     height: 64%;
     height: 100%;
@@ -19,13 +18,24 @@
 
 .create{
     width: 95%;
-    height: 86%;
+    height: auto;
     background-color: rgba(32, 15, 22, 0.3);
     background-image: linear-gradient(to top, transparent, rgba(32, 15, 22, 0.8));
     box-shadow: 5px 5px 8px 5px rgba(0, 0, 0, 0.7);
     margin: 1rem auto;
 }
 
+
+.content{
+    display: flex;
+
+    width: 95%;
+    height: auto;
+    background-color: rgba(32, 15, 22, 0.3);
+    background-image: linear-gradient(to top, transparent, rgba(32, 15, 22, 0.8));
+    box-shadow: 5px 5px 8px 5px rgba(0, 0, 0, 0.7);
+    margin: 2rem auto;
+}
 
 form{
     width: 70%;
@@ -41,6 +51,7 @@ h1{
     font-weight: 500;
     margin-bottom: 3rem;
     color:#33FFAC
+
 }
 
 
@@ -48,7 +59,6 @@ h1{
 .form{
     width: 100%;
 }
-
 
 
 
@@ -66,6 +76,11 @@ h1{
 
 
 
+  .ckeck-option{
+    margin-right: 3rem;
+    color:rgb(67, 194, 216);
+  }
+
 
 
 .buttons{
@@ -80,6 +95,7 @@ button{
     padding-right: 2rem; 
     padding-left: 2rem; 
 }
+
 
 
 
