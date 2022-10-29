@@ -58,6 +58,10 @@ h1{
 }
 
 
+input{
+    color:#33ff70;
+}
+
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color:#ffff;
     opacity: 1; /* Firefox */
@@ -77,3 +81,19 @@ button{
     padding-left: 2rem; 
 }
 
+
+
+
+@media(max-width:380px){
+    
+    .login{
+        height: 88%;
+        width: 74%;
+      }
+
+
+      button{
+        margin-top: 0.7rem;
+      }
+
+}

@@ -18,7 +18,7 @@ export class MovimentacaoReadComponent implements OnInit {
   movimentacao: Movimentacao[] = []
 
  // displayedColumns: string[] = ['id', 'tipo', 'descricao','valor', 'acoes']; 
-  displayedColumns: string[] = ['id', 'tipo', 'descricao','valor'];
+  displayedColumns: string[] = ['id', 'data', 'tipo', 'descricao','valor'];
 
 
 

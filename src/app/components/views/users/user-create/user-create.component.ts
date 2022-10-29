@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../user.model';
 import { UserService } from '../user.service';
-import { ActivatedRoute , Router} from '@angular/router';
+import { Router} from '@angular/router';
 
 
 @Component({
@@ -22,8 +22,7 @@ export class UserCreateComponent implements OnInit {
 
 
   constructor(
-    private service: UserService, 
-   // private route: ActivatedRoute, 
+    private service: UserService,   
     private router: Router
   ) { }
 

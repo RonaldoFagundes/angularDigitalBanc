@@ -168,5 +168,12 @@ selecionarConta(){
 }
 
 
+simularInvestimentos(id_user:String , id_conta:String){
+ // this.router.navigate([`investimentos/simular`]);
+  this.router.navigate([`investimentos/simular/${id_user}/${id_conta}`]);
+}
+
+
+
 
 }

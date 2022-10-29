@@ -20,8 +20,12 @@ import { Contas } from '../../contas/contas.model';
 export class MovimentacaoCreateComponent implements OnInit {
 
 
-
- //  id_conta:String=''
+  data:Date = new Date();
+  dia:String = ""
+  mes:String = ""
+  ano:number = 0
+  today:String = ""
+  
 
 
 id_user:String=""
@@ -44,8 +48,11 @@ user: User = {
   
        tipoMovimentacao:String =""   
 
+
+       
    movimentacao:Movimentacao={
     id:'',
+    data:'',
     tipo:'',
     descricao:'',
     valor:0
@@ -87,24 +94,32 @@ user: User = {
      this.id_user = this.route.snapshot.paramMap.get('id_user')!;
      this.contas.id = this.route.snapshot.paramMap.get('id_conta')!;
      this.getContaSaldo();
-
+     this.setToday(); 
      
   }
 
 
 
 
- 
+   setToday():void{
+    
+    this.dia = this.data.getDate().toString().padStart(2,'0');
+    this.mes = (this.data.getMonth()+1).toString().padStart(2,'0');
+    this.ano = this.data.getFullYear();
+    this.today = `${this.dia}/${this.mes}/${this.ano}`;
+   }
 
 
 
 
+
+   
 
   getContaSaldo():void{
     this.contaService.findById(this.contas.id!).subscribe((resposta )=>{
      this.contas.numero = resposta.numero;
-      this.contas.tipo  = resposta.tipo;
-       this.contas.saldo = resposta.saldo;       
+      this.contas.tipo   = resposta.tipo;
+       this.contas.saldo  = resposta.saldo;       
         console.log(resposta)
     })
   }
@@ -117,6 +132,8 @@ user: User = {
 
   lancarMovimentacao():void{   
 
+     this.movimentacao.data = this.today;
+     
     this.movimentacaoService.create(this.movimentacao , this.contas.id! ).subscribe((resposta) =>{
 
       this.router.navigate([`contas/${this.id_user}/${this.contas.id}/movimentacao`]);

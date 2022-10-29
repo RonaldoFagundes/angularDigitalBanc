@@ -27,6 +27,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatRadioModule } from '@angular/material/radio';
 
 import { FormsModule ,  ReactiveFormsModule} from '@angular/forms';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
@@ -36,6 +37,10 @@ import { ContaCreateComponent } from './components/views/contas/conta-create/con
 import { MovimentacaoCreateComponent } from './components/views/movimentacao/movimentacao-create/movimentacao-create.component';
 import { ContaUpdateComponent } from './components/views/contas/conta-update/conta-update.component';
 import { ContaSelectedComponent } from './components/views/contas/conta-selected/conta-selected.component';
+import { InvestimentosSimuladorComponent } from './components/views/investimentos/investimentos-simulador/investimentos-simulador.component';
+import { InvestimentosCreateComponent } from './components/views/investimentos/investimentos-create/investimentos-create.component';
+import { InvestimentosUpdateComponent } from './components/views/investimentos/investimentos-update/investimentos-update.component';
+import { InvestimentosDeleteComponent } from './components/views/investimentos/investimentos-delete/investimentos-delete.component';
 
 
 
@@ -46,7 +51,7 @@ import { ContaSelectedComponent } from './components/views/contas/conta-selected
     HeaderComponent,
     NavComponent,    
     FooterComponent, 
-    HomeComponent, UserReadComponent, UserLoginComponent, UserCreateComponent, ContaReadComponent, MovimentacaoReadComponent, InvestimentosReadComponent, ContaCreateComponent, MovimentacaoCreateComponent, ContaUpdateComponent, ContaSelectedComponent   
+    HomeComponent, UserReadComponent, UserLoginComponent, UserCreateComponent, ContaReadComponent, MovimentacaoReadComponent, InvestimentosReadComponent, ContaCreateComponent, MovimentacaoCreateComponent, ContaUpdateComponent, ContaSelectedComponent, InvestimentosSimuladorComponent, InvestimentosCreateComponent, InvestimentosUpdateComponent, InvestimentosDeleteComponent   
   ],
   imports: [
     BrowserModule,
@@ -66,7 +71,8 @@ import { ContaSelectedComponent } from './components/views/contas/conta-selected
     FormsModule,
     ReactiveFormsModule,
     MatSnackBarModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]

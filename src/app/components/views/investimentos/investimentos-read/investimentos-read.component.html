@@ -60,12 +60,12 @@
     
 
 
-             <a  class="edit" routerLink="#">
+             <a  class="edit" routerLink="update/{{row.id}}">
                <i class="material-icons">edit</i>
              </a>
  
           
-            <a  class="delete" routerLink="#">
+            <a  class="delete" routerLink="delete/{{row.id}}">
               <i class="material-icons">delete</i>
             </a> 
            
@@ -81,7 +81,16 @@
  
   </div>
  
- 
+
+
+  <div class="buttons">
+
+    <button (click)="addInvestimento()"  mat-stroked-button  class="mat-elevation-z8">ADD</button>     
+
+  </div>
+
+
+
 </div>
 
 </mat-sidenav-container>

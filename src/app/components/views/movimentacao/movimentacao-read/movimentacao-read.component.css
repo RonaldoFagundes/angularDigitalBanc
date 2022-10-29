@@ -19,13 +19,14 @@
 
 .content{
    
-    width: 98%;  
+    width: 94%;  
     
     background-color: rgba(58, 15, 22, 0.3);
     background-image: linear-gradient(to top, transparent, rgba(58, 110, 153, 0.384));
     box-shadow: 5px 5px 8px 5px rgba(0, 0, 0, 0.7);
 
     margin: 1rem auto;
+    padding: 1.4rem;
 }
 
 
@@ -43,6 +44,12 @@
     color: chartreuse;
     font-weight: 500;
 }
+
+
+.form-text{
+    color:#3385ff;
+}
+
 
 button{
     margin-bottom: 1rem;

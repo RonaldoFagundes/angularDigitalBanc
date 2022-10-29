@@ -5,6 +5,8 @@
 }
 
 
+
+
 .container{
     height: 64%;
     height: 100%;
@@ -41,11 +43,14 @@
 }
 
 
+
 .title h1{
     font-size: 2rem;
     color: chartreuse;
     font-weight: 500;
 }
+
+
 
 button{
     margin-bottom: 1rem;
@@ -73,4 +78,13 @@ button{
    color: brown;
    margin-left: .5rem;
 
+}
+
+
+
+@media(max-width:380px){
+
+    .title h1{
+        font-size: 1.2rem;
+    }
 }

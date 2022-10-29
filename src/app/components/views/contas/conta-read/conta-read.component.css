@@ -64,8 +64,7 @@
     width: 100%;
     margin: 2rem;
     text-align: start;
-    
-    
+       
 }
 
 
@@ -77,6 +76,7 @@ button{
     padding-left: 2rem; 
     background-color: rgb(80, 234, 245);
     color: blue;
+    margin-bottom: 1.2rem;
 }
 
 

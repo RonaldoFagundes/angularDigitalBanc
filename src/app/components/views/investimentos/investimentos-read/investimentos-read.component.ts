@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
 import { Investimentos } from '../investimentos.model';
 import { InvestimentosService } from '../investimentos.service';
 
@@ -18,7 +18,10 @@ export class InvestimentosReadComponent implements OnInit {
   investimentos: Investimentos [] = []
 
   
-  constructor(private service:InvestimentosService) { }
+  constructor(
+    private service:InvestimentosService,
+    private router: Router,
+    ) { }
 
 
 
@@ -34,6 +37,16 @@ export class InvestimentosReadComponent implements OnInit {
       console.log(resposta)
     })
    }
+
+
+
+
+
+   addInvestimento():void{
+    this.router.navigate([`investimentos/create`]); 
+   }
+
+
 
 
 }
