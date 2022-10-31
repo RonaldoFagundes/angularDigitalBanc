@@ -15,9 +15,8 @@
      <mat-form-field class="form">
 
         <mat-label class="form-text">Nome</mat-label>
-        <input matInput [(ngModel)]="user.name"   type="text" name="nome"
-         placeholder="EX. Nome">
-
+        <input matInput [(ngModel)]="user.name"  [formControl]="name" required   type="text" name="nome" placeholder="EX. Nome" maxlength="40">
+        <mat-error *ngIf="name.invalid">{{ getMessage() }}</mat-error>
      </mat-form-field>
 
 
@@ -25,18 +24,16 @@
      <mat-form-field class="form">
 
       <mat-label class="form-text">User</mat-label>
-      <input matInput [(ngModel)]="user.login"   type="text"  name="login"
-       placeholder="EX. Apelido">
-
+      <input matInput [(ngModel)]="user.login" [formControl]="login" required  type="text"  name="login"  placeholder="EX. Apelido" maxlength="40">
+      <mat-error *ngIf="login.invalid">{{ getMessage() }}</mat-error>
    </mat-form-field>
 
 
    <mat-form-field class="form">
 
       <mat-label class="form-text">Password</mat-label>
-      <input matInput [(ngModel)]="user.password"   type="text" name="password"
-       placeholder="de 3 a 12 caracteres">
-
+      <input matInput [(ngModel)]="user.password"  [formControl]="password" required   type="text" name="password"  placeholder="de 10 a 12 caracteres" maxlength="12">
+      <mat-error *ngIf="password.invalid">{{ getMessage() }}</mat-error>
    </mat-form-field>
 
      
@@ -45,7 +42,7 @@
 
       
 
-      <button (click)="create()" mat-stroked-button  class="mat-elevation-z8">
+      <button [disabled]="getMessage()" (click)="create()" mat-stroked-button  class="mat-elevation-z8">
         cadastrar
       </button>
 

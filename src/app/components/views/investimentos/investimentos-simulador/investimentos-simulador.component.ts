@@ -15,6 +15,9 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class InvestimentosSimuladorComponent implements OnInit {
 
 
+  valorValid = new FormControl('',[Validators.minLength(4)])
+  
+
 
 
   id_user:String=''
@@ -88,7 +91,7 @@ export class InvestimentosSimuladorComponent implements OnInit {
     this.id_user=this.route.snapshot.paramMap.get("id_user")!;
     this.id_conta=this.route.snapshot.paramMap.get("id_conta")!;
     this.getSelic();
-  }
+    }
 
 
 
@@ -238,6 +241,15 @@ findInvestimentoById(id:String): void {
          }
 
 
+
+         getValidate(){
+         
+        if (this.valor >= 1000 && this.valorValid.valid){
+               return false
+            }else{
+               return 'minimo R$ 1000,00'
+            } 
+         }
 
 
     }

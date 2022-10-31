@@ -52,9 +52,21 @@
     <mat-form-field class="form">
   
         <mat-label class="form-text">VALOR</mat-label>
+      
+        <input
+         matInput [(ngModel)]="valor"
 
-        <input matInput [(ngModel)]="valor" type="text" name="valor"  placeholder="digitar o valor">
-  
+         [formControl]="valorValid"
+         required="true"
+         type="text" 
+         name="valor"  
+         placeholder="digite só números" 
+         maxlength="6"
+         >
+
+        <mat-error *ngIf="valorValid.invalid">{{ getValidate() }}</mat-error>
+
+              
      </mat-form-field>
   
       
@@ -89,7 +101,7 @@
      
      <div class="buttons">
 
-      <button  (click)="calcularInvestimentos()" mat-stroked-button   class="mat-elevation-z8">
+      <button  (click)="calcularInvestimentos()" [disabled]="getValidate()"mat-stroked-button   class="mat-elevation-z8">
         Calcular
       </button> 
       

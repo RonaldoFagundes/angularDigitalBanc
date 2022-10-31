@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../user.model';
 import { UserService } from '../user.service';
-import { Router} from '@angular/router';
+import { Router } from '@angular/router';
+import { FormControl, Validators } from '@angular/forms';
+
 
 
 @Component({
@@ -17,61 +19,60 @@ export class UserCreateComponent implements OnInit {
     id: '',
     name: '',
     login: '',
-    password:''    
+    password: ''
   }
+
+  name = new FormControl("", [Validators.minLength(3)])
+  login = new FormControl("", [Validators.minLength(3)])
+  password = new FormControl("", [Validators.minLength(10)])
+
 
 
   constructor(
-    private service: UserService,   
+    private service: UserService,
     private router: Router
   ) { }
 
-  
- 
+
+
 
   ngOnInit(): void {
-    // this.user.id = this.route.snapshot.paramMap.get('id')!
-   // this.findById();
   }
 
 
 
 
- /*
-  findById(): void {
-    this.service.findById(this.user.id!).subscribe((resposta) => {
-    this.user.name = resposta.name
-    this.user.login = resposta.login
-  })
-} 
- */
+
+  create(): void {
+
+    this.service.create(this.user).subscribe((resposta) => {
+
+      this.router.navigate(['login']);
+      this.service.mensagem("Usuario criado com sucesso!");
+
+    }, err => {
+      for (let i = 0; i < err.error.errors.length; i++) {
+        this.service.mensagem(err.error.errors[i].message)
+      }
+    })
+
+  }
 
 
+  getMessage() {
 
+    if (this.name.invalid) {
+      return "O campo USER deve ter entre 3 e 40 caracteres "
+    }
+    if (this.login.invalid) {
+      return "O campo LOGIN deve ter entre 3 e 40 caracteres "
+    }
+    if (this.password.invalid) {
+      return "O campo PASSWORD deve ter entre 10 e 12 caracteres "
+    }
+    return false;
+  }
 
-
-
-
- create():void{
-
-  this.service.create(this.user).subscribe((resposta)=>{
-
-    // this.router.navigate([`contas/${this.user.id}/create`]);  
-     this.router.navigate(['login']);  
-     this.service.mensagem("Usuario criado com sucesso!");
-
-  }, err =>{
-     for(let i = 0 ; i < err.error.errors.length; i++  ) {
-         this.service.mensagem(err.error.errors[i].message)
-     }
-  })  
-
-
-
-}
-
-
-  
 
 
 }
