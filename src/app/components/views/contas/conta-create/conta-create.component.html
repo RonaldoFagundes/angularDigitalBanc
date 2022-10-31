@@ -9,14 +9,12 @@
   
   <form action="">
   
-      <h1>ABRIR CONTA</h1>
-  
+      <h1>ABRIR CONTA</h1> 
   
   
        <mat-form-field class="form">
   
-          <mat-label></mat-label>
-          <input matInput   [(ngModel)]="contas.numero"  type="text" name="numero"  disabled="true">
+        <input matInput   [(ngModel)]="contas.numero"  type="text" name="numero"  disabled="true">
   
        </mat-form-field>
   
@@ -25,21 +23,43 @@
        <mat-form-field class="form">
   
          <mat-label class="form-text">SALDO</mat-label>
-         <input matInput  [(ngModel)]="contas.saldo" type="text"  name="saldo"   placeholder="EX. DEPOSITAR">
+         <input matInput  [(ngModel)]="contas.saldo" type="text"  name="saldo"   placeholder="DEPOSITAR VALOR">
   
        </mat-form-field>
   
-  
-
-
-     <mat-form-field class="form">
-  
-        <mat-label class="form-text">TIPO</mat-label>
-        <input matInput [(ngModel)]="contas.tipo" type="text" name="tipo"  placeholder=" tipo de conta">
-  
-     </mat-form-field>
+     
   
          
+      
+
+     <mat-card class="content mat-elevation-z4">
+
+    
+
+        <div *ngFor="let tipo of contaTipo">
+
+          <input type="radio" name="Investimentos" value="{{tipo}}" 
+          (change)="radioChangeHandler($event)">
+
+          <i class="input-name">{{tipo}}</i>
+
+        </div>
+
+      
+
+      
+
+    </mat-card>
+
+
+
+    <mat-form-field class="form">
+  
+     <input matInput [(ngModel)]="contas.tipo" type="text" name="tipo"  disabled="true">
+
+   </mat-form-field>
+
+
      
 
      <div class="buttons">
@@ -49,11 +69,9 @@
      </div>
 
 
-
         
   </form>
-  
-  
+    
   
   </mat-card>
   

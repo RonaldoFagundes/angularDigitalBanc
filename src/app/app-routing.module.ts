@@ -16,84 +16,79 @@ import { MovimentacaoReadComponent } from './components/views/movimentacao/movim
 import { UserCreateComponent } from './components/views/users/user-create/user-create.component';
 import { UserLoginComponent } from './components/views/users/user-login/user-login.component';
 import { UserReadComponent } from './components/views/users/user-read/user-read.component';
+import { UserUpdateComponent } from './components/views/users/user-update/user-update.component';
 
 const routes: Routes = [
-  
-   {
-    path:'',
-    component:HomeComponent
-   },
 
-   {
-    path:'users',
-    component:UserReadComponent
-   },
+  {
+    path: '',
+    component: HomeComponent
+  },
 
-   {   
-    path:'login',
-    component:UserLoginComponent
-   },
-
-   
-   {
-    path:'create',
-    component:UserCreateComponent
-   },
-
-
-   {
-    path:'contas/:id_user',
-    component:ContaReadComponent
-    },
- 
-
-    {
-      path:'contas/:id_user/:id_conta/selected',
-      component:ContaSelectedComponent   
-     },
+  {
+    path: 'users',
+    component: UserReadComponent
+  },
+  {
+    path: 'login',
+    component: UserLoginComponent
+  },
+  {
+    path: 'create',
+    component: UserCreateComponent
+  },
+  {
+    path:'users/update/:id',
+    component: UserUpdateComponent
+  },
 
 
-     {
-      path:'contas/:id_user/create',
-      component:ContaCreateComponent
-      },
+
+  {
+    path: 'contas/:id_user',
+    component: ContaReadComponent
+  },
+  {
+    path: 'contas/:id_user/:id_conta/selected',
+    component: ContaSelectedComponent
+  },
+  {
+    path: 'contas/:id_user/create',
+    component: ContaCreateComponent
+  },
 
 
-   {
-    path:'contas/:id_user/:id_conta/movimentacao',    
-    component:MovimentacaoReadComponent
-   },
+  {
+    path: 'contas/:id_user/:id_conta/movimentacao',
+    component: MovimentacaoReadComponent
+  },
+  {
+    path: 'contas/:id_user/:id_conta/movimentacao/create',
+    component: MovimentacaoCreateComponent
+  },
 
-    {
-      path:'contas/:id_user/:id_conta/movimentacao/create',
-      component:MovimentacaoCreateComponent
-    },
-   
 
-   {
-    path:'investimentos',
-    component:InvestimentosReadComponent
-   },
+  {
+    path: 'investimentos',
+    component: InvestimentosReadComponent
+  },
+  {
+    path: 'investimentos/simular/:id_user/:id_conta',
+    component: InvestimentosSimuladorComponent
+  },
+  {
+    path: 'investimentos/create',
+    component: InvestimentosCreateComponent
+  },
+  {
+    path: 'investimentos/delete/:id',
+    component: InvestimentosDeleteComponent
+  },
+  {
+    path: 'investimentos/update/:id',
+    component: InvestimentosUpdateComponent
+  }
 
-   {
-    path:'investimentos/simular/:id_user/:id_conta',
-    component:InvestimentosSimuladorComponent    
-   },
-
-   {
-    path:'investimentos/create',
-    component:InvestimentosCreateComponent
-   },
-  
-   {
-    path:'investimentos/delete/:id',
-    component:InvestimentosDeleteComponent
-   },
-
-   {
-   path:'investimentos/update/:id',
-   component:InvestimentosUpdateComponent  
-   }
 ];
 
 

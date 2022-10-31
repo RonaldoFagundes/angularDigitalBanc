@@ -41,6 +41,7 @@ import { InvestimentosSimuladorComponent } from './components/views/investimento
 import { InvestimentosCreateComponent } from './components/views/investimentos/investimentos-create/investimentos-create.component';
 import { InvestimentosUpdateComponent } from './components/views/investimentos/investimentos-update/investimentos-update.component';
 import { InvestimentosDeleteComponent } from './components/views/investimentos/investimentos-delete/investimentos-delete.component';
+import { UserUpdateComponent } from './components/views/users/user-update/user-update.component';
 
 
 
@@ -51,7 +52,7 @@ import { InvestimentosDeleteComponent } from './components/views/investimentos/i
     HeaderComponent,
     NavComponent,    
     FooterComponent, 
-    HomeComponent, UserReadComponent, UserLoginComponent, UserCreateComponent, ContaReadComponent, MovimentacaoReadComponent, InvestimentosReadComponent, ContaCreateComponent, MovimentacaoCreateComponent, ContaUpdateComponent, ContaSelectedComponent, InvestimentosSimuladorComponent, InvestimentosCreateComponent, InvestimentosUpdateComponent, InvestimentosDeleteComponent   
+    HomeComponent, UserReadComponent, UserLoginComponent, UserCreateComponent, ContaReadComponent, MovimentacaoReadComponent, InvestimentosReadComponent, ContaCreateComponent, MovimentacaoCreateComponent, ContaUpdateComponent, ContaSelectedComponent, InvestimentosSimuladorComponent, InvestimentosCreateComponent, InvestimentosUpdateComponent, InvestimentosDeleteComponent, UserUpdateComponent   
   ],
   imports: [
     BrowserModule,

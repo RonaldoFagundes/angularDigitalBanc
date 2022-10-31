@@ -61,7 +61,7 @@ export class InvestimentosUpdateComponent implements OnInit {
 
 
    cancelar():void{
-    this.router.navigate(['categorias']);
+    this.router.navigate(['investimentos'])
    }
 
 }

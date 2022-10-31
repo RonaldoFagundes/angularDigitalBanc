@@ -31,34 +31,24 @@
 
    <mat-form-field class="form">
 
-      <mat-label class="form-text">Password</mat-label>
+     <mat-label class="form-text">Password</mat-label>
       <input matInput [(ngModel)]="user.password"  [formControl]="password" required   type="text" name="password"  placeholder="de 10 a 12 caracteres" maxlength="12">
-      <mat-error *ngIf="password.invalid">{{ getMessage() }}</mat-error>
+     <mat-error *ngIf="password.invalid">{{ getMessage() }}</mat-error>
    </mat-form-field>
 
      
     
-     <div class="buttons">
-
-      
+     <div class="buttons">      
 
       <button [disabled]="getMessage()" (click)="create()" mat-stroked-button  class="mat-elevation-z8">
         cadastrar
       </button>
 
-
-
     </div>
-
-
-
-   
 
 
       
 </form>
-
-
 
 </mat-card>
 

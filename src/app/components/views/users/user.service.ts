@@ -15,11 +15,9 @@ import { User } from './user.model';
 export class UserService {
 
   baseUrl:String = environment.baseUrl;
-  
-    
+      
 
   constructor(private http: HttpClient , private _snack: MatSnackBar) { }
-
 
 
   findAll():Observable<User[]>{
@@ -38,21 +36,18 @@ export class UserService {
 
 
 
-  
- 
-
-
-
-
   create(user:User):Observable<User>{
     const url = `${this.baseUrl}users`
      return this.http.post<User>(url,user);
   }
 
 
+ update(user:User):Observable<void>{
+    const url = `${this.baseUrl}users/${user.id}`
+     return this.http.put<void>(url ,user)
+ }
 
-
-
+  
 mensagem(str:String):void{
   this._snack.open(`${str}`,'OK', {
     horizontalPosition:'end',

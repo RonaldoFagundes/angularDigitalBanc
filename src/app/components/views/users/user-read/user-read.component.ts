@@ -23,8 +23,7 @@ export class UserReadComponent implements OnInit {
 
   findAll(){
     this.service.findAll().subscribe(resposta=> {
-      this.users = resposta;
-     // console.log(resposta)
+      this.users = resposta;    
     })
    }
 

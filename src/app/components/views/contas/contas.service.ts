@@ -17,20 +17,12 @@ export class ContasService {
 
   constructor( private http: HttpClient , private _snack: MatSnackBar ) { }
 
-  
- /*  findAll():Observable<Contas[]>{
-    const url = `${this.baseUrl}contas?users=1`  
-    return this.http.get<Contas[]>(url);
-  } */
-
-
- // testidconta:String="1"
+ 
   
   findAllByUser(id_user:String):Observable<Contas[]>{
     const url = `${this.baseUrl}contas?users=${id_user}`
     return this.http.get<Contas[]>(url);
   }
-
 
 
 
@@ -41,13 +33,10 @@ export class ContasService {
   
 
 
-
   create(contas:Contas, id_user:String):Observable<Contas>{
     const url = `${this.baseUrl}contas?users=${id_user}`
      return this.http.post<Contas>(url,contas);
   }
-
-
 
 
   
@@ -56,7 +45,6 @@ export class ContasService {
     const url = `${this.baseUrl}contas/${contas.id}`
      return this.http.put<void>(url,contas);
   }
-
 
 
 

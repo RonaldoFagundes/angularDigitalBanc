@@ -29,6 +29,13 @@ export class ContaCreateComponent implements OnInit {
 
  
 
+  contaTipo: any = [
+    'Conta Corrente',
+    'Poupança',
+    'Investimento',   
+  ];
+
+
 
   constructor(
     private route: ActivatedRoute,
@@ -71,6 +78,12 @@ export class ContaCreateComponent implements OnInit {
 
 
 
+
+   radioChangeHandler(event: any) {
+     this.contas.tipo = event.target.value;
+   }
+
+   
 
 
 }

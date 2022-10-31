@@ -15,17 +15,14 @@ import { UserService } from '../../users/user.service';
 export class MovimentacaoReadComponent implements OnInit {
 
 
-  movimentacao: Movimentacao[] = []
+ movimentacao: Movimentacao[] = []
 
- // displayedColumns: string[] = ['id', 'tipo', 'descricao','valor', 'acoes']; 
-  displayedColumns: string[] = ['id', 'data', 'tipo', 'descricao','valor'];
-
+ 
+ displayedColumns: string[] = ['id', 'data', 'tipo', 'descricao','valor'];
 
 
  id_conta:String =""
-
  id_user:String =""
-
 
 
   constructor(
@@ -34,7 +31,6 @@ export class MovimentacaoReadComponent implements OnInit {
     private router: Router,
     private userService:UserService
     ) { }
-
 
     
 
@@ -46,19 +42,12 @@ export class MovimentacaoReadComponent implements OnInit {
 
 
 
-
-   
-
-
-
-
   findAllMovimentacaoByConta():void{
     this.service.findAllByConta(this.id_conta).subscribe((resposta)=>{
        this.movimentacao = resposta;
        console.log(resposta);
     })
   }
-
 
 
 

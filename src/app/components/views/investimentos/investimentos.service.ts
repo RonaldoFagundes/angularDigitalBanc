@@ -15,63 +15,63 @@ import { Investimentos } from './investimentos.model';
 
 export class InvestimentosService {
 
-  baseUrl:String = environment.baseUrl;
+  baseUrl: String = environment.baseUrl;
 
 
 
-  constructor(private http: HttpClient , private _snack: MatSnackBar ) { }
+  constructor(private http: HttpClient, private _snack: MatSnackBar) { }
 
 
- 
 
 
-  findAll():Observable<Investimentos[]>{
-    const url = `${this.baseUrl}investimentos`  
+
+  findAll(): Observable<Investimentos[]> {
+    const url = `${this.baseUrl}investimentos`
     return this.http.get<Investimentos[]>(url);
   }
- 
-  
 
 
 
 
-  getSelic(id_invest:String):Observable<Investimentos>{
+
+
+  getSelic(id_invest: String): Observable<Investimentos> {
     const url = `${this.baseUrl}investimentos/${id_invest}`
     return this.http.get<Investimentos>(url);
   }
 
 
 
-  
 
-  findById(id_invest:String):Observable<Investimentos>{
+
+  findById(id_invest: String): Observable<Investimentos> {
     const url = `${this.baseUrl}investimentos/${id_invest}`
     return this.http.get<Investimentos>(url);
   }
-  
 
 
 
 
-  create(investimentos:Investimentos):Observable<Investimentos>{
-     const url = `${this.baseUrl}investimentos`
-      return this.http.post<Investimentos>(url,investimentos)
+
+  create(investimentos: Investimentos): Observable<Investimentos> {
+    const url = `${this.baseUrl}investimentos`
+    return this.http.post<Investimentos>(url, investimentos)
   }
 
 
 
 
 
-  update(investimentos:Investimentos):Observable<void>{
-      const url = `${this.baseUrl}investimentos/${investimentos.id}`
-       return this.http.put<void>(url,investimentos);
+  update(investimentos: Investimentos): Observable<void> {
+    const url = `${this.baseUrl}investimentos/${investimentos.id}`
+    return this.http.put<void>(url, investimentos);
   }
 
 
 
 
 
-  delete(id:String):Observable<void>{
+  delete(id: String): Observable<void> {
     const url = `${this.baseUrl}investimentos/${id}`
     return this.http.delete<void>(url);
   }
@@ -82,11 +82,11 @@ export class InvestimentosService {
 
 
 
-  mensagem(str:String):void{
-    this._snack.open(`${str}`,'OK', {
-      horizontalPosition:'end',
-      verticalPosition:'top',
-      duration:3000
+  mensagem(str: String): void {
+    this._snack.open(`${str}`, 'OK', {
+      horizontalPosition: 'end',
+      verticalPosition: 'top',
+      duration: 3000
     })
   }
 
